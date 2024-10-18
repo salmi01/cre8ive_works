@@ -8,7 +8,7 @@ import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
 
 interface NavbarProps {
-  scrollToWebsiteDesign: () => void;
+  scrollToPhotography: () => void;
   scrollToGraphicDesign: () => void;
   scrollToShopifyStores: () => void;
   scrollToBrands: () => void;
@@ -16,7 +16,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({
-  scrollToWebsiteDesign,
+  scrollToPhotography,
   scrollToGraphicDesign,
   scrollToShopifyStores,
   scrollToBrands,
@@ -34,16 +34,16 @@ const Navbar = ({
 
   return (
     <div>
-      <div className="p-6 md:p-10 flex items-center justify-between z-50">
+      <div className="p-6 md:p-6 flex items-center justify-between z-50">
         <div>
           <Link className="cursor-pointer" href="/">
             <Image
               priority
-              src="/logo/logo.svg"
+              src="/logo/c8w-logo.svg"
               alt="Logo"
               width={100}
               height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
+              className=""
             />
           </Link>
         </div>
@@ -55,8 +55,8 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
+          <div onClick={scrollToPhotography} className="hover:text-gray-50">
+            Photography
           </div>
           <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
             Graphic Design
